@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+*, *:before, *:after {
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+    height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    font: 14px/20px "Lato", Arial, sans-serif;
+    margin: 0;
+    height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#app {
+    height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wrapper--inner {
+    width: 200px;
+}
+
+.watch {
+    padding-top: 2rem;
+}
+
+.watch--item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    grid-row-gap: 1rem;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.hero-circle {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 1px 8px rgb(34 34 34 / 30%), inset 0 1px 8px rgb(34 34 34 / 30%);
+    background-color: rgba(0,0,0,0.3);
+}
+
+.hero-face {
+    width: 100%;
+    height: 100%;
+}
+
+.hand {
+    box-shadow: 0 1px 8px rgb(34 34 34 / 30%), 0 1px 8px rgb(34 34 34 / 30%);
+}
+
+.hour {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -4px 0 -4px -25%;
+    padding: 3px 0 3px 25%;
+    background: #fff;
+    -ms-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    border-radius: 4px 0 0 4px;
+}
+
+.minute {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -40% -3px 0;
+    padding: 40% 2px 0;
+    background: #fff;
+    -ms-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    border-radius: 3px 3px 0 0;
+}
+
+.second {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -40% -1px 0 0;
+    padding: 40% 1px 0;
+    background: #fff;
+    -ms-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-right: -10px;
 }

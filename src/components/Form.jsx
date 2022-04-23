@@ -1,8 +1,6 @@
 import {useState} from "react";
 import PropTypes from "prop-types";
 
-import Note from "../models/Note";
-
 export default function Form({onAdd}) {
 
   const [form, setForm] = useState({
@@ -15,8 +13,7 @@ export default function Form({onAdd}) {
 
   const handleSubmit = evt => {
     evt.preventDefault()
-    const note = new Note(form.text)
-    onAdd(note)
+    onAdd(form.text)
     setForm({
       text: ''
     })

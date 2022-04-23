@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 
 export default function Note({item, onDelete: handleDelete}) {
-
   return (
     <div className="item">
       <div className="text">{item.text}</div>

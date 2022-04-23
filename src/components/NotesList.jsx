@@ -6,7 +6,7 @@ export default function NotesList({list, onDelete: handleDelete}) {
   const listItems = list.map(item => <Note key={item.id} item={item} onDelete={handleDelete}/>)
 
   return(
-    <div className="watches">
+    <div className="notes">
       {listItems}
     </div>
   )

@@ -2,9 +2,11 @@ import PropTypes from 'prop-types'
 
 export default function Note({item, onDelete: handleDelete}) {
   return (
-    <div className="item">
+    <div className="note">
       <div className="text">{item.text}</div>
-      <div className="delete" onClick={() => handleDelete(item.id)}>X</div>
+      <button className="delete" onClick={() => handleDelete(item.id)}>
+        <span className="material-symbols-outlined">cancel</span>
+      </button>
     </div>
   )
 }

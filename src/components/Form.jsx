@@ -27,7 +27,7 @@ export default function Form({onAdd}) {
           <textarea id="text" name="text" value={form.text} onChange={handleText} ></textarea>
         </div>
         <div className="form-group">
-          <button type="submit">Добавить</button>
+          <button type="submit"><span className="material-symbols-outlined">note_add</span></button>
         </div>
       </div>
     </form>

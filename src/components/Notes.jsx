@@ -64,8 +64,8 @@ export default function Notes() {
   return (
     <div className="wrapper" data-testid="test">
       <div className="wrapper--inner">
-        <header><h1>Notes</h1><button type="button" onClick={handleReload}>Reload</button></header>
-        { loading ? <div className="loading">Loading...</div> : hasError ? <div className="error">Error!</div> : <NotesList list={notes} onDelete={handleDelete} /> }
+        <header><h1>Notes</h1><button type="button" onClick={handleReload}><span className="material-symbols-outlined">sync</span></button></header>
+        { loading ? <div className="loading"><span className="material-symbols-outlined">hourglass_empty</span></div> : hasError ? <div className="error">Error!</div> : <NotesList list={notes} onDelete={handleDelete} /> }
         <Form onAdd={handleAdd} />
       </div>
     </div>

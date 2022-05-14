@@ -36,12 +36,11 @@ export default function Notes() {
       .then(result => {
         setLoading(false)
         setNotes(prevState => [...notes, result])
+        handleReload()
       }).catch(err => {
         setLoading(false)
         setHasError(true)
     });
-
-
   }
 
   const handleDelete = id => {
@@ -55,6 +54,7 @@ export default function Notes() {
       .then(result => {
         setLoading(false)
         setNotes(result)
+        handleReload()
       }).catch(err => {
         setLoading(false)
         setHasError(true)
